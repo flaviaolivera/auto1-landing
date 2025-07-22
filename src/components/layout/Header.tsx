@@ -15,13 +15,13 @@ const Header = () => {
   ]
 
   return (
-    <header className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 z-50">
+    <header className="fixed top-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-100 z-50 shadow-sm">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="text-xl font-bold text-gray-900">
-              AUTO1
+            <Link href="/" className="text-2xl font-black text-gray-900 tracking-tight">
+              AUTO<span className="text-orange-500">1</span>
             </Link>
           </div>
 
@@ -44,7 +44,7 @@ const Header = () => {
           <div className="hidden md:block">
             <Link
               href="#contact"
-              className="bg-black text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors duration-200"
+              className="bg-orange-500 text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-orange-600 transition-all duration-200 shadow-md hover:shadow-lg"
             >
               Hablemos
             </Link>
@@ -87,7 +87,7 @@ const Header = () => {
               ))}
               <Link
                 href="#contact"
-                className="bg-black text-white block px-3 py-2 rounded-lg text-base font-medium hover:bg-gray-800 mt-4"
+                className="bg-orange-500 text-white block px-4 py-3 rounded-lg text-base font-semibold hover:bg-orange-600 mt-4 text-center shadow-md"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Hablemos

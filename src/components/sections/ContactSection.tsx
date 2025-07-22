@@ -29,12 +29,12 @@ const ContactSection = () => {
     <section id="contact" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            ¡Hablemos de tu proyecto!
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+            Hablemos de tu proyecto
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
             ¿Tienes una idea o necesitas optimizar algo existente? 
-            Conversemos sobre cómo puedo ayudarte a conseguir mejores resultados.
+            <strong className="text-gray-900"> Conversemos sobre cómo acelerar tus resultados.</strong>
           </p>
         </div>
 
@@ -50,20 +50,20 @@ const ContactSection = () => {
                   <a
                     key={index}
                     href={method.href}
-                    className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all duration-200 group"
+                    className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 hover:border-orange-500 hover:shadow-md transition-all duration-200 group"
                     target={method.href.startsWith('http') ? '_blank' : undefined}
                     rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   >
                     <div className="text-3xl">{method.icon}</div>
                     <div className="flex-1">
-                      <h4 className="font-semibold text-gray-900 group-hover:text-blue-600">
+                      <h4 className="font-semibold text-gray-900 group-hover:text-orange-500">
                         {method.title}
                       </h4>
                       <p className="text-sm text-gray-600 mb-1">{method.description}</p>
-                      <p className="text-blue-600 font-medium">{method.value}</p>
+                      <p className="text-orange-500 font-medium">{method.value}</p>
                     </div>
                     <svg 
-                      className="w-5 h-5 text-gray-400 group-hover:text-blue-600" 
+                      className="w-5 h-5 text-gray-400 group-hover:text-orange-500" 
                       fill="none" 
                       viewBox="0 0 24 24" 
                       strokeWidth="2" 
@@ -146,7 +146,7 @@ const ContactSection = () => {
               
               <button 
                 type="submit"
-                className="w-full bg-black text-white py-3 px-6 rounded-lg font-medium hover:bg-gray-800 transition-colors duration-200"
+                className="w-full bg-orange-500 text-white py-3 px-6 rounded-lg font-bold hover:bg-orange-600 transition-colors duration-200"
               >
                 Enviar mensaje
               </button>

@@ -21,11 +21,11 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
       <div className="p-6">
         {/* Category badge */}
-        <div className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 mb-3">
+        <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-orange-100 text-orange-700 mb-4">
           {project.category.toUpperCase()}
         </div>
 
-        <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-500 transition-colors">
           {project.title}
         </h3>
         
@@ -50,7 +50,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           {project.liveUrl && (
             <a 
               href={project.liveUrl}
-              className="flex items-center text-sm text-blue-600 hover:text-blue-800 font-medium"
+              className="flex items-center text-sm text-orange-500 hover:text-orange-600 font-bold"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -63,7 +63,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           {project.githubUrl && (
             <a 
               href={project.githubUrl}
-              className="flex items-center text-sm text-gray-600 hover:text-gray-800 font-medium"
+              className="flex items-center text-sm text-blue-600 hover:text-blue-700 font-medium"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -86,11 +86,12 @@ const ProjectsSection = () => {
     <section id="projects" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Proyectos destacados
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+            Casos de éxito
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Una selección de trabajos que muestran mi enfoque en UX, desarrollo y optimización
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            Proyectos que han generado <strong className="text-gray-900">resultados medibles</strong> 
+            para empresas que buscan acelerar su crecimiento digital
           </p>
         </div>
 
@@ -102,7 +103,7 @@ const ProjectsSection = () => {
 
         {/* Ver todos los proyectos */}
         <div className="text-center mt-12">
-          <button className="inline-flex items-center border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-medium hover:border-gray-400 transition-colors duration-200">
+          <button className="inline-flex items-center border-2 border-orange-500 text-orange-500 px-8 py-3 rounded-lg font-bold hover:bg-orange-500 hover:text-white transition-all duration-200">
             Ver todos los proyectos
             <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />

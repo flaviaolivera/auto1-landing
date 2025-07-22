@@ -43,12 +43,12 @@ const ProcessSection = () => {
     <section id="process" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Cómo trabajo
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+            Mi metodología probada
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Mi proceso probado para crear experiencias digitales que convierten. 
-            Desde la investigación hasta la optimización continua.
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            <strong className="text-gray-900">5 fases estructuradas</strong> para transformar tu producto digital 
+            en una máquina de generar conversiones y resultados medibles.
           </p>
         </div>
 
@@ -62,13 +62,13 @@ const ProcessSection = () => {
               {steps.map((step, index) => (
                 <div key={index} className="relative">
                   {/* Timeline dot */}
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg z-10"></div>
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-orange-500 rounded-full border-4 border-white shadow-lg z-10"></div>
                   
                   {/* Content */}
                   <div className={`text-center ${index % 2 === 0 ? 'pt-16' : 'pb-16'}`}>
                     <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
                       <div className="text-3xl mb-3">{step.icon}</div>
-                      <div className="text-sm font-mono text-blue-600 mb-2">{step.number}</div>
+                      <div className="text-sm font-mono text-orange-500 mb-2 font-bold">{step.number}</div>
                       <h3 className="text-lg font-bold text-gray-900 mb-3">{step.title}</h3>
                       <p className="text-sm text-gray-600 mb-4">{step.description}</p>
                       
@@ -95,7 +95,7 @@ const ProcessSection = () => {
               <div key={index} className="flex gap-6">
                 {/* Number & Icon */}
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                  <div className="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center text-xl font-black">
                     {step.number}
                   </div>
                 </div>
@@ -126,20 +126,20 @@ const ProcessSection = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <div className="bg-gray-50 rounded-2xl p-8">
+          <div className="bg-gradient-to-r from-orange-50 to-blue-50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              ¿Listo para mejorar tu conversión?
+              ¿Listo para acelerar tu crecimiento?
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Cada proyecto es único. Conversemos sobre tus objetivos específicos y 
-              cómo mi proceso puede adaptarse a tus necesidades.
+              Cada proyecto es único. Hablemos sobre tus objetivos específicos y 
+              cómo mi metodología puede adaptarse a tus necesidades.
             </p>
             <a 
               href="#contact"
-              className="inline-flex items-center bg-black text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors duration-200"
+              className="inline-flex items-center bg-orange-500 text-white px-8 py-4 rounded-lg font-bold hover:bg-orange-600 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
-              Empezar mi proyecto
-              <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+              Consulta estratégica gratuita
+              <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
             </a>
