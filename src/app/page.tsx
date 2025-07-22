@@ -1,4 +1,9 @@
 // src/app/page.tsx
+import ComparisonSection from '@/components/sections/ComparisonSection'
+import ProjectsSection from '@/components/sections/ProjectsSection'
+import ProcessSection from '@/components/sections/ProcessSection'
+import ContactSection from '@/components/sections/ContactSection'
+
 export default function Home() {
   return (
     <div className="min-h-screen">
@@ -32,34 +37,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Placeholder para las demás secciones */}
-      <section id="comparison" className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Lo que buscas vs Lo que ofrezco</h2>
-          <p className="text-gray-600">Sección comparativa - Próximamente</p>
-        </div>
-      </section>
-
-      <section id="projects" className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Proyectos destacados</h2>
-          <p className="text-gray-600">Grid de proyectos - Próximamente</p>
-        </div>
-      </section>
-
-      <section id="process" className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Cómo trabajo</h2>
-          <p className="text-gray-600">Proceso de trabajo - Próximamente</p>
-        </div>
-      </section>
-
-      <section id="contact" className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">¡Hablemos!</h2>
-          <p className="text-gray-600">Formulario de contacto - Próximamente</p>
-        </div>
-      </section>
+      {/* Sections */}
+      <ComparisonSection />
+      <ProjectsSection />
+      <ProcessSection />
+      <ContactSection />
     </div>
   )
 }
