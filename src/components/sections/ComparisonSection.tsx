@@ -37,45 +37,83 @@ const ComparisonSection = () => {
           </p>
         </div>
 
-        <div className="grid gap-8 md:gap-12">
+        <div className="space-y-16">
           {comparisons.map((item, index) => (
-            <div 
-              key={index} 
-              className="grid md:grid-cols-2 gap-8 items-center"
-            >
-              {/* Problema */}
-              <div className="text-center md:text-right">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 text-red-600 rounded-full text-2xl mb-4">
-                  ❌
+            <div key={index}>
+              {/* Desktop Layout */}
+              <div className="hidden md:grid md:grid-cols-3 gap-8 items-center">
+                {/* Problema */}
+                <div className="text-center">
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-red-50 border-2 border-red-200 text-red-500 rounded-full text-3xl mb-6">
+                    ❌
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {item.problem}
+                  </h3>
+                  <p className="text-gray-600">
+                    El problema actual
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  {item.problem}
-                </h3>
-                <p className="text-gray-600">
-                  El problema que enfrentas actualmente
-                </p>
+
+                {/* Arrow */}
+                <div className="flex justify-center">
+                  <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-orange-500" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Solución */}
+                <div className="text-center">
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-green-50 border-2 border-green-200 text-green-600 rounded-full text-3xl mb-6">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {item.solution}
+                  </h3>
+                  <p className="text-gray-600">
+                    Mi solución
+                  </p>
+                </div>
               </div>
 
-              {/* Arrow */}
-              <div className="hidden md:flex justify-center">
-                <div className="w-8 h-8 text-gray-400">
-                  <svg fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                  </svg>
-                </div>
-              </div>
+              {/* Mobile Layout */}
+              <div className="md:hidden">
+                <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
+                  {/* Problema */}
+                  <div className="text-center mb-8">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-red-50 border-2 border-red-200 text-red-500 rounded-full text-2xl mb-4">
+                      ❌
+                    </div>
+                    <h4 className="text-lg font-bold text-gray-900 mb-2">Problema:</h4>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      {item.problem}
+                    </h3>
+                  </div>
 
-              {/* Solución */}
-              <div className="text-center md:text-left">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 text-green-600 rounded-full text-2xl mb-4">
-                  {item.icon}
+                  {/* Divider */}
+                  <div className="flex items-center mb-8">
+                    <div className="flex-1 h-px bg-gray-200"></div>
+                    <div className="mx-4 w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+                      <svg className="w-4 h-4 text-orange-500" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </div>
+                    <div className="flex-1 h-px bg-gray-200"></div>
+                  </div>
+
+                  {/* Solución */}
+                  <div className="text-center">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-green-50 border-2 border-green-200 text-green-600 rounded-full text-2xl mb-4">
+                      {item.icon}
+                    </div>
+                    <h4 className="text-lg font-bold text-gray-900 mb-2">Solución:</h4>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      {item.solution}
+                    </h3>
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  {item.solution}
-                </h3>
-                <p className="text-gray-600">
-                  Mi enfoque para resolver tu problema
-                </p>
               </div>
             </div>
           ))}
