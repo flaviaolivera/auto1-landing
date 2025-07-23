@@ -47,12 +47,12 @@ const ComparisonSection = () => {
         {
           requirement: "Performance, usability & UX optimization",
           solution: "Scalable interfaces, GSAP animations, responsive design & micro-interactions",
-          icon: "⚡"
+          icon: "🏃"
         },
         {
           requirement: "A/B testing funnels & conversion optimization",
           solution: "Strategic Advertising background + conversion-focused component design",
-          icon: "🎯"
+          icon: "📈"
         },
         {
           requirement: "Landing pages development & maintenance",

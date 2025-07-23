@@ -8,10 +8,9 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navItems = [
-    { name: 'Inicio', href: '#hero' },
-    { name: 'Proyectos', href: '#projects' },
-    { name: 'Cómo trabajo', href: '#process' },
-    { name: 'Contacto', href: '#contact' },
+    { name: 'Perfect Match', href: '#match' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'How I Work', href: '#process' },
   ]
 
   return (
@@ -40,16 +39,6 @@ const Header = () => {
             </div>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Link
-              href="#contact"
-              className="bg-orange-500 text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-orange-600 transition-all duration-200 shadow-md hover:shadow-lg"
-            >
-              Hablemos
-            </Link>
-          </div>
-
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
@@ -57,7 +46,7 @@ const Header = () => {
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
               aria-expanded="false"
             >
-              <span className="sr-only">Abrir menú</span>
+              <span className="sr-only">Open menu</span>
               {!isMenuOpen ? (
                 <svg className="block h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -85,13 +74,6 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <Link
-                href="#contact"
-                className="bg-orange-500 text-white block px-4 py-3 rounded-lg text-base font-semibold hover:bg-orange-600 mt-4 text-center shadow-md"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Hablemos
-              </Link>
             </div>
           </div>
         )}

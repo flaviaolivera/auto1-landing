@@ -55,11 +55,11 @@ export default function Home() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="text-xl text-gray-600 mb-10 max-w-4xl mx-auto leading-relaxed"
+                  className="text-xl text-gray-600 mb-10 max-w-5xl mx-auto leading-relaxed"
                 >
                   From <strong className="text-gray-900">Advertising Strategy to Software Development</strong>. 
                   Bringing curiosity, persistence and multicultural adaptability to AUTO1&apos;s international team. 
-                  <strong className="text-gray-900"> Vue, React & TypeScript</strong> with a conversion optimization mindset.
+                  <strong className="text-gray-900"> Vue, React & TypeScript</strong> with a product-focused mindset.
                 </motion.p>
                 
                 <motion.div
@@ -140,7 +140,7 @@ export default function Home() {
                 <p className="text-xl text-gray-600 mb-10 max-w-4xl mx-auto leading-relaxed">
                   From <strong className="text-gray-900">Advertising Strategy to Software Development</strong>. 
                   Bringing curiosity, persistence and multicultural adaptability to AUTO1&apos;s international team. 
-                  <strong className="text-gray-900"> Vue, React & TypeScript</strong> with a conversion optimization mindset.
+                  <strong className="text-gray-900"> Vue, React & TypeScript</strong> with a product-focused mindset.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-8 justify-center">
