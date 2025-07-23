@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react'
 
 const ComparisonSection = () => {
   const [isClient, setIsClient] = useState(false)
-  const [activeTab, setActiveTab] = useState('technical')
+  const [activeTab, setActiveTab] = useState<'technical' | 'ux' | 'collaboration'>('technical')
 
   useEffect(() => {
     setIsClient(true)
@@ -85,9 +85,9 @@ const ComparisonSection = () => {
   }
 
   const tabs = [
-    { id: 'technical', label: 'Technical Skills', icon: '💻' },
-    { id: 'ux', label: 'UX & Performance', icon: '📈' },
-    { id: 'collaboration', label: 'Collaboration', icon: '🤝' }
+    { id: 'technical' as const, label: 'Technical Skills', icon: '💻' },
+    { id: 'ux' as const, label: 'UX & Performance', icon: '📈' },
+    { id: 'collaboration' as const, label: 'Collaboration', icon: '🤝' }
   ]
 
   if (!isClient) {
@@ -97,11 +97,11 @@ const ComparisonSection = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
-              Why there's a <span className="text-orange-500">Perfect Match</span>
+              Why there&apos;s a <span className="text-orange-500">Perfect Match</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
               <strong className="text-gray-900">Strategic analysis</strong> showing perfect alignment 
-              between AUTO1's requirements and my strategic development background
+              between AUTO1&apos;s requirements and my strategic development background
             </p>
           </div>
 
@@ -213,11 +213,11 @@ const ComparisonSection = () => {
         <AnimateOnScroll>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
-              Why there's a <span className="text-orange-500">Perfect Match</span>
+              Why there&apos;s a <span className="text-orange-500">Perfect Match</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
               <strong className="text-gray-900">Strategic analysis</strong> showing perfect alignment 
-              between AUTO1's requirements and my strategic development background
+              between AUTO1&apos;s requirements and my strategic development background
             </p>
           </div>
         </AnimateOnScroll>
@@ -386,10 +386,10 @@ const ComparisonSection = () => {
           <div className="text-center mt-16">
             <div className="bg-gradient-to-r from-orange-50 to-blue-50 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Ready to accelerate AUTO1's C2B platform?
+                Ready to accelerate AUTO1&apos;s C2B platform?
               </h3>
               <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                Let's discuss how my strategic thinking + technical skills can contribute to AUTO1's growth.
+                Let&apos;s discuss how my strategic thinking + technical skills can contribute to AUTO1&apos;s growth.
               </p>
               <motion.a 
                 href="#contact"
@@ -398,7 +398,7 @@ const ComparisonSection = () => {
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
-                Let's Connect
+                Let&apos;s Connect
                 <motion.svg 
                   className="ml-2 w-5 h-5" 
                   fill="none" 

@@ -58,7 +58,7 @@ export default function Home() {
                   className="text-xl text-gray-600 mb-10 max-w-4xl mx-auto leading-relaxed"
                 >
                   From <strong className="text-gray-900">Advertising Strategy to Software Development</strong>. 
-                  Bringing curiosity, persistence and multicultural adaptability to AUTO1's international team. 
+                  Bringing curiosity, persistence and multicultural adaptability to AUTO1&apos;s international team. 
                   <strong className="text-gray-900"> Vue, React & TypeScript</strong> with a conversion optimization mindset.
                 </motion.p>
                 
@@ -69,13 +69,13 @@ export default function Home() {
                   className="flex flex-col sm:flex-row gap-8 justify-center"
                 >
                   <motion.a
-                    href="#comparison"
+                    href="#match"
                     whileHover={{ scale: 1.2 }}
                     whileTap={{ scale: 0.8 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                     className="bg-orange-500 text-white px-8 py-4 rounded-lg font-bold hover:bg-orange-600 shadow-lg cursor-pointer"
                   >
-                    Why I'm Perfect for AUTO1
+                    Why I&apos;m Perfect for AUTO1
                   </motion.a>
                   <motion.a
                     href="#projects"
@@ -139,7 +139,7 @@ export default function Home() {
                 
                 <p className="text-xl text-gray-600 mb-10 max-w-4xl mx-auto leading-relaxed">
                   From <strong className="text-gray-900">Advertising Strategy to Software Development</strong>. 
-                  Bringing curiosity, persistence and multicultural adaptability to AUTO1's international team. 
+                  Bringing curiosity, persistence and multicultural adaptability to AUTO1&apos;s international team. 
                   <strong className="text-gray-900"> Vue, React & TypeScript</strong> with a conversion optimization mindset.
                 </p>
                 
@@ -148,7 +148,7 @@ export default function Home() {
                     href="#match"
                     className="bg-orange-500 text-white px-8 py-4 rounded-lg font-bold hover:bg-orange-600 shadow-lg cursor-pointer"
                   >
-                    Why I'm Perfect for AUTO1
+                    Why I&apos;m Perfect for AUTO1
                   </a>
                   <a
                     href="#projects"
