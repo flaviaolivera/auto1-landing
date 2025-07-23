@@ -17,9 +17,9 @@ export default function Home() {
   }, [])
 
   const stats = [
-    { value: "+40%", label: "Mejora promedio en conversión", color: "text-orange-500" },
-    { value: "24h", label: "Tiempo de respuesta garantizado", color: "text-blue-600" },
-    { value: "100%", label: "Proyectos entregados a tiempo", color: "text-green-600" }
+    { value: "100%", label: "Ready to Learn & Adapt", color: "text-orange-500" },
+    { value: "24/7", label: "Passionate Commitment", color: "text-blue-600" },
+    { value: "∞", label: "Growth Mindset", color: "text-green-600" }
   ]
 
   return (
@@ -37,7 +37,7 @@ export default function Home() {
                   transition={{ duration: 0.6 }}
                   className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6"
                 >
-                  🚀 Especialista en UX/UI y A/B Testing
+                  🚗 Junior Software Engineer • AUTO1 Ready
                 </motion.div>
                 
                 <motion.h1
@@ -46,10 +46,9 @@ export default function Home() {
                   transition={{ duration: 0.8, delay: 0.2 }}
                   className="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-tight"
                 >
-                  Acelero tu 
-                  <span className="text-orange-500"> conversión</span>
+                  Strategic Thinking
                   <br />
-                  con datos
+                  Meets <span className="text-orange-500">Code Craft</span>
                 </motion.h1>
                 
                 <motion.p
@@ -58,9 +57,9 @@ export default function Home() {
                   transition={{ duration: 0.8, delay: 0.4 }}
                   className="text-xl text-gray-600 mb-10 max-w-4xl mx-auto leading-relaxed"
                 >
-                  Desarrollo productos digitales que no solo se ven profesionales, sino que 
-                  <strong className="text-gray-900"> generan resultados medibles</strong>. 
-                  Enfoque en UX, performance y testing A/B para maximizar tu ROI.
+                  From <strong className="text-gray-900">Advertising Strategy to Software Development</strong>. 
+                  Bringing curiosity, persistence and multicultural adaptability to AUTO1's international team. 
+                  <strong className="text-gray-900"> Vue, React & TypeScript</strong> with a conversion optimization mindset.
                 </motion.p>
                 
                 <motion.div
@@ -70,22 +69,22 @@ export default function Home() {
                   className="flex flex-col sm:flex-row gap-8 justify-center"
                 >
                   <motion.a
-                    href="#projects"
+                    href="#comparison"
                     whileHover={{ scale: 1.2 }}
                     whileTap={{ scale: 0.8 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                     className="bg-orange-500 text-white px-8 py-4 rounded-lg font-bold hover:bg-orange-600 shadow-lg cursor-pointer"
                   >
-                    Ver casos de éxito
+                    Why I'm Perfect for AUTO1
                   </motion.a>
                   <motion.a
-                    href="#contact"
+                    href="#projects"
                     whileHover={{ scale: 1.2 }}
                     whileTap={{ scale: 0.8 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                     className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-bold cursor-pointer hover:bg-blue-600 hover:text-white"
                   >
-                    Consulta gratuita
+                    See My Development Journey
                   </motion.a>
                 </motion.div>
                 
@@ -129,34 +128,33 @@ export default function Home() {
               // Versión estática para SSR
               <>
                 <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                  🚀 Especialista en UX/UI y A/B Testing
+                  🚗 Junior Software Engineer • AUTO1 Ready
                 </div>
                 
                 <h1 className="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-tight">
-                  Acelero tu 
-                  <span className="text-orange-500"> conversión</span>
+                  Strategic Thinking
                   <br />
-                  con datos
+                  Meets <span className="text-orange-500">Code Craft</span>
                 </h1>
                 
                 <p className="text-xl text-gray-600 mb-10 max-w-4xl mx-auto leading-relaxed">
-                  Desarrollo productos digitales que no solo se ven profesionales, sino que 
-                  <strong className="text-gray-900"> generan resultados medibles</strong>. 
-                  Enfoque en UX, performance y testing A/B para maximizar tu ROI.
+                  From <strong className="text-gray-900">Advertising Strategy to Software Development</strong>. 
+                  Bringing curiosity, persistence and multicultural adaptability to AUTO1's international team. 
+                  <strong className="text-gray-900"> Vue, React & TypeScript</strong> with a conversion optimization mindset.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-8 justify-center">
                   <a
-                    href="#projects"
+                    href="#match"
                     className="bg-orange-500 text-white px-8 py-4 rounded-lg font-bold hover:bg-orange-600 shadow-lg cursor-pointer"
                   >
-                    Ver casos de éxito
+                    Why I'm Perfect for AUTO1
                   </a>
                   <a
-                    href="#contact"
+                    href="#projects"
                     className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-bold cursor-pointer hover:bg-blue-600 hover:text-white"
                   >
-                    Consulta gratuita
+                    See My Development Journey
                   </a>
                 </div>
                 
