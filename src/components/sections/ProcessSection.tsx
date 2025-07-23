@@ -49,9 +49,9 @@ const ProcessSection = () => {
                     ${index % 2 === 0 ? 'lg:pt-16' : 'lg:pb-16'}
                   `}
                   whileHover={{ 
-                    y: window.innerWidth >= 1024 ? (index % 2 === 0 ? -5 : 5) : 0,
-                    x: window.innerWidth < 1024 ? 10 : 0,
-                    scale: window.innerWidth >= 1024 ? 1.02 : 1
+                    y: index % 2 === 0 ? -5 : 5,
+                    x: 10,
+                    scale: 1.02
                   }}
                   transition={{ 
                     duration: 0.3,
