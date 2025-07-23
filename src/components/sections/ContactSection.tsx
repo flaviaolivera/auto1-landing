@@ -1,37 +1,15 @@
-// src/components/sections/ContactSection.tsx
 'use client'
 
 import { motion } from 'motion/react'
 import AnimateOnScroll from '@/components/ui/AnimateOnScroll'
+import { contactLinks, personalInfo } from '@/data/contact'
 
 const ContactSection = () => {
-  const contactLinks = [
-    {
-      title: "Email",
-      value: "fernandezoliveraflavia@gmail.com",
-      href: "mailto:fernandezoliveraflavia@gmail.com",
-      icon: "✉️"
-    },
-    {
-      title: "LinkedIn",
-      value: "/flavia-fernandezolivera",
-      href: "https://www.linkedin.com/in/flavia-fernandezolivera/",
-      icon: "💼"
-    },
-    {
-      title: "GitHub",
-      value: "/flaviaolivera",
-      href: "https://github.com/flaviaolivera",
-      icon: "💻"
-    }
-  ]
-
   return (
-    <footer className="py-16 bg-gray-100 border-t border-gray-200">
+    <section className="py-16 bg-gray-100 border-t border-gray-200">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimateOnScroll>
           <div className="text-center">
-            {/* Name & Title */}
             <motion.div 
               className="mb-8"
               initial={{ opacity: 0, y: 20 }}
@@ -40,14 +18,13 @@ const ContactSection = () => {
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                Flavia Fernández Olivera
+                {personalInfo.name}
               </h3>
               <p className="text-gray-600 font-medium">
-                Junior Software Engineer
+                {personalInfo.title}
               </p>
             </motion.div>
 
-            {/* Contact Links */}
             <motion.div 
               className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-8"
               initial={{ opacity: 0, y: 20 }}
@@ -57,7 +34,7 @@ const ContactSection = () => {
             >
               {contactLinks.map((contact, index) => (
                 <motion.a
-                  key={index}
+                  key={contact.title}
                   href={contact.href}
                   target={contact.href.startsWith('http') ? '_blank' : undefined}
                   rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
@@ -99,7 +76,7 @@ const ContactSection = () => {
           </div>
         </AnimateOnScroll>
       </div>
-    </footer>
+    </section>
   )
 }
 

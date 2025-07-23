@@ -1,4 +1,3 @@
-// src/components/ui/AnimateOnScroll.tsx
 'use client'
 
 import { motion } from 'motion/react'

@@ -1,19 +1,21 @@
-// src/components/sections/ProjectsSection.tsx
+// src/components/sections/projects/ProjectCard.tsx
 'use client'
 
 import { motion } from 'motion/react'
-import { getFeaturedProjects, Project } from '@/data/projects'
-import AnimateOnScroll from '@/components/ui/AnimateOnScroll'
+import type { Project } from '@/data/projects'
 
-const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
+interface ProjectCardProps {
+  project: Project
+  index: number
+}
+
+const ProjectCard = ({ project, index }: ProjectCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      whileHover={{ 
-        y: -8,
-      }}
+      whileHover={{ y: -8 }}
       transition={{ 
         opacity: { duration: 0.6, delay: index * 0.1 },
         y: { duration: 0.3, ease: "easeOut" }
@@ -21,7 +23,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
       className="group bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow duration-300"
     >
       <div className="p-6">
-        {/* Category badge */}
+        {/* Category Badge */}
         <motion.div 
           className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-700 mb-4"
           whileHover={{ scale: 1.05 }}
@@ -96,10 +98,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
               className="flex items-center text-sm text-orange-500 hover:text-orange-600 font-bold"
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ 
-                scale: 1.05,
-                x: 3 
-              }}
+              whileHover={{ scale: 1.05, x: 3 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400 }}
             >
@@ -123,10 +122,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
               className="flex items-center text-sm text-blue-600 hover:text-blue-700 font-medium"
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ 
-                scale: 1.05,
-                x: 3 
-              }}
+              whileHover={{ scale: 1.05, x: 3 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400 }}
             >
@@ -148,32 +144,4 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
   )
 }
 
-const ProjectsSection = () => {
-  const featuredProjects = getFeaturedProjects()
-
-  return (
-    <section id="projects" className="py-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimateOnScroll>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
-              Production <span className="text-orange-500">Projects</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Real-world applications showcasing <strong className="text-gray-900">conversion optimization</strong>, 
-              scalable architecture, and user-centered design - all relevant to AUTO1&apos;s platform needs
-            </p>
-          </div>
-        </AnimateOnScroll>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredProjects.map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index} />
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
-export default ProjectsSection
+export default ProjectCard
