@@ -5,41 +5,34 @@ import { motion } from 'motion/react'
 import AnimateOnScroll from '@/components/ui/AnimateOnScroll'
 
 const ProcessSection = () => {
-  const steps = [
+  const workingStyle = [
     {
       number: "01",
-      title: "Research & Discovery",
-      description: "Analizo tu negocio, usuarios y competencia. Identifico oportunidades de mejora y defino objetivos claros.",
-      icon: "🔍",
-      details: ["User Research", "Competitive Analysis", "Business Goals", "Technical Audit"]
+      title: "Always Learning",
+      description: "I dive deep into new technologies and best practices. If something doesn&apos;t work the first time, I persist until I understand it completely.",
+      icon: "🧠",
+      details: ["Documentation reading", "Hands-on experimentation", "Community learning", "Technical blogs"]
     },
     {
       number: "02", 
-      title: "Strategy & Planning",
-      description: "Diseño la estrategia UX y plan de testing A/B. Defino métricas clave y hipótesis a validar.",
-      icon: "📋",
-      details: ["UX Strategy", "A/B Test Plan", "Success Metrics", "Technical Architecture"]
+      title: "Team-First Approach",
+      description: "I love sharing knowledge and learning from teammates. Code reviews and pair programming are opportunities to grow together.",
+      icon: "🤝",
+      details: ["Active code reviews", "Knowledge sharing", "Open communication", "Constructive feedback"]
     },
     {
       number: "03",
-      title: "Design & Prototype",
-      description: "Creo wireframes, prototipos y diseños finales. Enfoque en usabilidad y conversión.",
-      icon: "🎨",
-      details: ["Wireframing", "Visual Design", "Prototyping", "Design System"]
+      title: "Clean Code Advocate",
+      description: "I write maintainable, well-tested code from day one. Testing isn&apos;t optional - it&apos;s part of the development process.",
+      icon: "✨",
+      details: ["Unit testing", "Clean architecture", "Documentation", "Code standards"]
     },
     {
       number: "04",
-      title: "Development & Testing",
-      description: "Desarrollo con React/Next.js y implemento tests A/B. Código limpio y escalable.",
+      title: "Agile by Nature",
+      description: "I thrive in fast-paced environments and adapt quickly to changing requirements. Scrum ceremonies help me stay aligned with team goals.",
       icon: "⚡",
-      details: ["Frontend Development", "A/B Testing Setup", "Performance Optimization", "QA Testing"]
-    },
-    {
-      number: "05",
-      title: "Launch & Optimize",
-      description: "Lanzamiento, monitoreo de métricas y optimización continua basada en datos reales.",
-      icon: "🚀",
-      details: ["Deployment", "Analytics Setup", "Performance Monitoring", "Continuous Optimization"]
+      details: ["Scrum methodology", "Sprint planning", "Daily standups", "Retrospectives"]
     }
   ]
 
@@ -49,11 +42,11 @@ const ProcessSection = () => {
         <AnimateOnScroll>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
-              Mi metodología probada
+              How I <span className="text-orange-500">Work</span> & Learn
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              <strong className="text-gray-900">5 fases estructuradas</strong> para transformar tu producto digital 
-              en una máquina de generar conversiones y resultados medibles.
+              <strong className="text-gray-900">Growth mindset, collaborative spirit, and continuous learning</strong> - 
+              the foundation of my development journey.
             </p>
           </div>
         </AnimateOnScroll>
@@ -70,8 +63,8 @@ const ProcessSection = () => {
               transition={{ duration: 1.5, ease: "easeOut" }}
             />
             
-            <div className="grid grid-cols-5 gap-8">
-              {steps.map((step, index) => (
+            <div className="grid grid-cols-4 gap-8">
+              {workingStyle.map((step, index) => (
                 <motion.div 
                   key={index} 
                   className="relative"
@@ -149,7 +142,7 @@ const ProcessSection = () => {
         {/* Mobile/Tablet View - Vertical */}
         <div className="lg:hidden">
           <div className="space-y-8">
-            {steps.map((step, index) => (
+            {workingStyle.map((step, index) => (
               <motion.div 
                 key={index} 
                 className="flex gap-6"
@@ -237,54 +230,6 @@ const ProcessSection = () => {
             ))}
           </div>
         </div>
-
-        {/* Bottom CTA */}
-        <AnimateOnScroll delay={0.5}>
-          <div className="text-center mt-16">
-            <motion.div 
-              className="bg-gradient-to-r from-orange-50 to-blue-50 rounded-2xl p-8"
-              whileHover={{ scale: 1.02 }}
-              transition={{ 
-                duration: 0.3,
-                ease: "easeOut"
-              }}
-            >
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                ¿Listo para acelerar tu crecimiento?
-              </h3>
-              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                Cada proyecto es único. Hablemos sobre tus objetivos específicos y 
-                cómo mi metodología puede adaptarse a tus necesidades.
-              </p>
-              <motion.a 
-                href="#contact"
-                className="inline-flex items-center bg-orange-500 text-white px-8 py-4 rounded-lg font-bold hover:bg-orange-600 shadow-lg cursor-pointer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ 
-                  duration: 0.2,
-                  ease: "easeOut"
-                }}
-              >
-                Consulta estratégica gratuita
-                <motion.svg 
-                  className="ml-2 w-5 h-5" 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
-                  strokeWidth="2" 
-                  stroke="currentColor"
-                  whileHover={{ x: 3 }}
-                  transition={{ 
-                    duration: 0.2,
-                    ease: "easeOut"
-                  }}
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </motion.svg>
-              </motion.a>
-            </motion.div>
-          </div>
-        </AnimateOnScroll>
       </div>
     </section>
   )

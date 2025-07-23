@@ -1,53 +1,46 @@
 // src/data/projects.ts
-
 export interface Project {
   id: string
   title: string
   description: string
-  image: string
   technologies: string[]
   liveUrl?: string
   githubUrl?: string
   category: 'web' | 'mobile' | 'ux' | 'testing'
+  insights?: string[]
+  autoRelevance?: string
 }
 
 export const projects: Project[] = [
   {
-    id: 'ecommerce-optimization',
-    title: 'E-commerce A/B Testing',
-    description: 'Optimización de conversión en checkout mediante testing A/B, incrementando ventas en un 34%.',
-    image: '/projects/ecommerce.jpg',
-    technologies: ['React', 'Next.js', 'A/B Testing', 'Analytics'],
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com/example',
-    category: 'testing'
+    id: 'wakkap-gaming-ecommerce',
+    title: 'Wakkap - Gaming E-commerce',
+    description: 'Full-stack gaming platform with advanced cart optimization, multi-step checkout flow, and real-time validation for enhanced user experience.',
+    technologies: ['Vue.js', 'Nuxt3', 'TypeScript', 'PrimeVue', 'Pinia', 'VeeValidate', 'Zod', 'i18n', 'Tailwind CSS'],
+    liveUrl: 'https://wakkap.com/',
+    category: 'web',
+    insights: ['Multi-step form optimization', 'Real-time validation', 'i18n support', 'State management'],
+    autoRelevance: 'Conversion-focused e-commerce with optimized checkout flows'
   },
   {
-    id: 'saas-dashboard',
-    title: 'SaaS Dashboard UX',
-    description: 'Rediseño completo de dashboard empresarial con foco en usabilidad y experiencia del usuario.',
-    image: '/projects/dashboard.jpg',
-    technologies: ['Figma', 'React', 'TypeScript', 'Tailwind'],
-    liveUrl: 'https://example.com',
-    category: 'ux'
+    id: 'defsense-b2b-platform',
+    title: 'DefSense - Landing Page',
+    description: 'Conversion-focused landing page for defense simulation services with strategic messaging, CSS animations, and SEO optimization.',
+    technologies: ['Vue.js', 'Nuxt3', 'TypeScript', 'Tailwind CSS', 'Storybook', 'Vitest'],
+    liveUrl: 'https://defsense.ai/',
+    category: 'web',
+    insights: ['Conversion optimization', 'CSS animations', 'SEO focused', 'Clean & scalable code'],
+    autoRelevance: 'Landing page optimization with conversion-focused design'
   },
   {
-    id: 'mobile-app',
-    title: 'App de Productividad',
-    description: 'Aplicación móvil para gestión de tareas con interfaz intuitiva y animaciones fluidas.',
-    image: '/projects/mobile.jpg',
-    technologies: ['React Native', 'Expo', 'Framer Motion'],
-    githubUrl: 'https://github.com/example',
-    category: 'mobile'
-  },
-  {
-    id: 'landing-conversion',
-    title: 'Landing de Alta Conversión',
-    description: 'Landing page optimizada que logró un 8.5% de conversión mediante pruebas iterativas.',
-    image: '/projects/landing.jpg',
-    technologies: ['Next.js', 'Tailwind', 'Vercel', 'Google Analytics'],
-    liveUrl: 'https://example.com',
-    category: 'web'
+    id: 'map-of-history-ar',
+    title: 'Map of History - Landing Page',
+    description: 'Conversion-optimized landing page for AR narrative project with multi-language support, SEO optimization, and maintainable architecture.',
+    technologies: ['Vue.js', 'Nuxt3', 'TypeScript', 'i18n', 'Tailwind CSS', 'Storybook', 'Vitest'],
+    liveUrl: 'https://mapofhistory.crowtec.co/',
+    category: 'web',
+    insights: ['Multi-language support', 'SEO optimization', 'Maintainable code', 'Testing coverage'],
+    autoRelevance: 'SEO-optimized landing pages with international reach'
   }
 ]
 
@@ -56,5 +49,5 @@ export const getProjectsByCategory = (category: Project['category']) => {
 }
 
 export const getFeaturedProjects = () => {
-  return projects.slice(0, 3)
+  return projects.slice(0, 3) // Show top 3 projects
 }

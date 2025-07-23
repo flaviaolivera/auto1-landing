@@ -381,39 +381,6 @@ const ComparisonSection = () => {
           </motion.div>
         </motion.div>
 
-        {/* CTA */}
-        <AnimateOnScroll delay={0.4}>
-          <div className="text-center mt-16">
-            <div className="bg-gradient-to-r from-orange-50 to-blue-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Ready to accelerate AUTO1&apos;s C2B platform?
-              </h3>
-              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                Let&apos;s discuss how my strategic thinking + technical skills can contribute to AUTO1&apos;s growth.
-              </p>
-              <motion.a 
-                href="#contact"
-                className="inline-flex items-center bg-orange-500 text-white px-8 py-4 rounded-lg font-bold hover:bg-orange-600 shadow-lg cursor-pointer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              >
-                Let&apos;s Connect
-                <motion.svg 
-                  className="ml-2 w-5 h-5" 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
-                  strokeWidth="2" 
-                  stroke="currentColor"
-                  whileHover={{ x: 3 }}
-                  transition={{ type: "spring", stiffness: 400 }}
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </motion.svg>
-              </motion.a>
-            </div>
-          </div>
-        </AnimateOnScroll>
       </div>
     </section>
   )

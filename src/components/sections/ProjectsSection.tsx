@@ -20,50 +20,15 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
       }}
       className="group bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow duration-300"
     >
-      {/* Image placeholder */}
-      <motion.div 
-        className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden"
-        whileHover={{ scale: 1.02 }}
-        transition={{ 
-          duration: 0.3,
-          ease: "easeOut"
-        }}
-      >
-        <div className="absolute inset-0 flex items-center justify-center">
-          <motion.div 
-            className="text-6xl opacity-20"
-            whileHover={{ 
-              scale: 1.2, 
-              rotate: 5,
-              opacity: 0.4 
-            }}
-            transition={{ 
-              duration: 0.3,
-              ease: "easeOut"
-            }}
-          >
-            {project.category === 'web' && '🌐'}
-            {project.category === 'mobile' && '📱'}
-            {project.category === 'ux' && '🎨'}
-            {project.category === 'testing' && '📊'}
-          </motion.div>
-        </div>
-        {/* Overlay on hover */}
-        <motion.div 
-          className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300"
-          whileHover={{ backgroundColor: "rgba(0,0,0,0.1)" }}
-        />
-      </motion.div>
-
       <div className="p-6">
         {/* Category badge */}
         <motion.div 
-          className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-orange-100 text-orange-700 mb-4"
+          className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-700 mb-4"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           transition={{ type: "spring", stiffness: 400, damping: 17 }}
         >
-          {project.category.toUpperCase()}
+          {project.category.toUpperCase()} PROJECT
         </motion.div>
 
         <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-500 transition-colors">
@@ -73,6 +38,35 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
         <p className="text-gray-600 mb-4 leading-relaxed">
           {project.description}
         </p>
+
+        {/* AUTO1 Relevance */}
+        {project.autoRelevance && (
+          <div className="bg-orange-50 border border-orange-100 rounded-lg p-3 mb-4">
+            <h4 className="text-sm font-semibold text-orange-800 mb-1">Why this matters for AUTO1:</h4>
+            <p className="text-sm text-orange-700">{project.autoRelevance}</p>
+          </div>
+        )}
+
+        {/* Key Insights */}
+        {project.insights && (
+          <div className="mb-4">
+            <h4 className="text-sm font-semibold text-gray-800 mb-2">Key Technical Insights:</h4>
+            <div className="grid grid-cols-2 gap-1">
+              {project.insights.map((insight, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, delay: i * 0.1 }}
+                  className="flex items-center text-xs text-gray-600"
+                >
+                  <span className="w-1.5 h-1.5 bg-orange-400 rounded-full mr-2"></span>
+                  {insight}
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Technologies */}
         <div className="flex flex-wrap gap-2 mb-4">
@@ -109,7 +103,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400 }}
             >
-              Ver proyecto
+              View Project
               <motion.svg 
                 className="ml-1 w-3 h-3" 
                 fill="none" 
@@ -136,7 +130,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400 }}
             >
-              Código
+              Code
               <motion.svg 
                 className="ml-1 w-3 h-3" 
                 fill="currentColor" 
@@ -163,11 +157,11 @@ const ProjectsSection = () => {
         <AnimateOnScroll>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
-              Casos de éxito
+              Production <span className="text-orange-500">Projects</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Proyectos que han generado <strong className="text-gray-900">resultados medibles</strong> 
-              para empresas que buscan acelerar su crecimiento digital
+              Real-world applications showcasing <strong className="text-gray-900">conversion optimization</strong>, 
+              scalable architecture, and user-centered design - all relevant to AUTO1&apos;s platform needs
             </p>
           </div>
         </AnimateOnScroll>
@@ -177,7 +171,6 @@ const ProjectsSection = () => {
             <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>
-
       </div>
     </section>
   )
