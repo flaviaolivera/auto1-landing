@@ -28,7 +28,7 @@ src/
 │   │       └── ProjectCard.tsx
 │   ├── layout/             # Shared layout components
 │   └── ui/                 # Reusable UI primitives
-└── data/                 # Separated data layer
+└── data/                  # Separated data layer
 ```
 
 ---
