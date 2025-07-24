@@ -4,7 +4,7 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 
 export const metadata: Metadata = {
-  title: 'Flavia Fernández - Junior Software Engineer | AUTO1 Candidate',
+  title: 'Flavia Fernández Olivera - Junior Software Engineer | AUTO1 Candidate',
   description: 'From advertising strategy to software development. Vue.js, React & TypeScript developer with product-focused mindset, ready to join AUTO1\'s international team.',
   keywords: [
     'Software Engineer', 
