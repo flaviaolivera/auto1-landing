@@ -1,4 +1,4 @@
-# 🚗 AUTO1 Candidate Landing - Flavia Fernández
+# 🚗 AUTO1 Candidate Landing - Flavia Fernández Olivera
 
 > **Strategic thinking meets code craft** - A landing page built to demonstrate technical skills and cultural fit for AUTO1's international team.
 
